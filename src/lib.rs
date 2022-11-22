@@ -14,6 +14,7 @@ use std::io::{BufRead, BufReader, Read, Write};
 use std::path::{Path, PathBuf};
 use std::str::FromStr;
 
+
 macro_rules! update_and_test {
     ($self: ident, $set_func:ident, $value:expr, $get_func:ident) => {
         if let Some(v) = $value {
@@ -52,6 +53,7 @@ pub mod perf_event;
 pub mod pid;
 pub mod rdma;
 pub mod systemd;
+pub mod process_ext;
 
 use crate::blkio::BlkIoController;
 use crate::cpu::CpuController;
